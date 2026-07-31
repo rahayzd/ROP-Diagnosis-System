@@ -102,7 +102,7 @@ For the end-to-end CNN baseline, a recorded ResNet50 test run achieved accuracy 
 | `ROP_Classification_NN_FE.ipynb` | Stage 2: feature extraction and classical classification on the one-image-per-patient dataset. |
 | `ROP_Classification_NN_FE_10x.ipynb` | Stage 3: evaluation on the patient-oriented 10x dataset. |
 | `ROP_Classification_NN_FE_10x_PP.ipynb` | Stage 4: evaluation on the preprocessed 10x dataset. |
-| `Report and Results.pdf` | Thesis report and detailed results. |
+| `Report and Results.pdf` | Thesis report and detailed results. (Farsi/Persian)|
 
 ---
 ## Running the notebooks
