@@ -1,9 +1,12 @@
 # ROP Diagnosis System
 
-A bachelor's thesis project for binary classification of Retinopathy of Prematurity (ROP) from infant retinal fundus images. The project evaluates transfer-learning CNNs, then uses the most promising CNN backbones as feature extractors for conventional machine-learning classifiers.
+Binary classification of Retinopathy of Prematurity (ROP) from infant retinal fundus images. The project evaluates transfer-learning CNNs, then uses the most promising CNN backbones as feature extractors for conventional machine-learning classifiers.
 
-> **Research-use only.** This project is not a medical device and must not be used as a substitute for clinical diagnosis. Clinical use requires independent validation, appropriate approvals, and regulatory review.
+This project has been done as Bachelor's final thesis project.
 
+> **Research-use only.** This project is not a medical device and must not be used as a substitute for clinical diagnosis. 
+
+---
 ## Dataset sources
 
 This work uses the **Retinal Image Dataset of Infants and Retinopathy of Prematurity**:
@@ -13,6 +16,7 @@ This work uses the **Retinal Image Dataset of Infants and Retinopathy of Prematu
 
 The dataset article describes 6,004 retinal images from 188 newborns. Images are not included in this repository. Before using the data, review its license, terms, provenance, and all applicable privacy and ethics requirements.
 
+---
 ## Experimental design
 
 The study follows a staged evaluation process designed to compare models while reducing patient-level data leakage.
@@ -72,6 +76,7 @@ The preprocessing flow is applied to the 10x dataset and the selected combinatio
 
 The article motivates brightness correction, circular cropping, contrast enhancement, and green-channel analysis to improve the visibility of retinal structures. This repository adapts those methods to a binary-classification workflow.
 
+---
 ## Results summary
 
 The table shows selected results recorded in the executed notebooks. Full outputs and experiment details are available in the notebooks and in [Report and Results.pdf](Report%20and%20Results.pdf).
@@ -86,6 +91,7 @@ The table shows selected results recorded in the executed notebooks. Full output
 
 For the end-to-end CNN baseline, a recorded ResNet50 test run achieved accuracy of **0.7895**, ROC-AUC of **0.7678**, PR-AUC of **0.6738**, and F1-score of **0.5385**. These are research results from specific data splits and settings, not clinical-performance claims.
 
+---
 ## Repository contents
 
 | Notebook | Purpose |
@@ -98,6 +104,7 @@ For the end-to-end CNN baseline, a recorded ResNet50 test run achieved accuracy 
 | `ROP_Classification_NN_FE_10x_PP.ipynb` | Stage 4: evaluation on the preprocessed 10x dataset. |
 | `Report and Results.pdf` | Thesis report and detailed results. |
 
+---
 ## Running the notebooks
 
 The notebooks were authored for Google Colab and expect Google Drive paths under `/content/drive/MyDrive/ROP-Data/`.
@@ -110,8 +117,12 @@ The notebooks were authored for Google Colab and expect Google Drive paths under
 
 Core dependencies include TensorFlow, NumPy, pandas, scikit-learn, imbalanced-learn, XGBoost, OpenCV, matplotlib, seaborn, tqdm, and Kaggle.
 
+---
 ## Reproducibility notes
 
 - The main experiments use `SEED = 42`, a batch size of 16, and 224 x 224 images.
 - Results can vary with library versions, GPU hardware, pretrained weights, preprocessing configuration, and the data split.
 - Do not commit images, patient information, dataset copies, or Kaggle credentials to GitHub.
+
+---
+Isfahan University of Technology - BSc Final Thesis
